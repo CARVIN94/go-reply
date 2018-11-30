@@ -15,6 +15,21 @@ func SignInError() *Error {
 	return &Error{Code: 1003, Message: "账号或密码错误"}
 }
 
+// TokenEncryptError 错误
+func TokenEncryptError() *Error {
+	return &Error{Code: 1004, Message: "加密错误"}
+}
+
+// TokenDecryptError 错误
+func TokenDecryptError() *Error {
+	return &Error{Code: 1005, Message: "密钥错误"}
+}
+
+// AuthError 错误
+func AuthError() *Error {
+	return &Error{Code: 1006, Message: "权限不足"}
+}
+
 // NotExist 错误
 func NotExist(name string) *Error {
 	return &Error{Code: 2001, Message: "参数不存在: " + name}
