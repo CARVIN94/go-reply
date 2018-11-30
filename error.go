@@ -45,12 +45,17 @@ func NotExistByAccount() *Error {
 	return &Error{Code: 2101, Message: "账号不存在"}
 }
 
+// StatusErrorByAccount 账号状态异常
+func StatusErrorByAccount() *Error {
+	return &Error{Code: 2102, Message: "账号状态异常"}
+}
+
 // ExistByAccount 名称已被占用
 func ExistByAccount() *Error {
-	return &Error{Code: 2102, Message: "账号已被占用"}
+	return &Error{Code: 2103, Message: "账号已被占用"}
 }
 
 // ExistByName 名称已被占用
 func ExistByName() *Error {
-	return &Error{Code: 2103, Message: "名称已被占用"}
+	return &Error{Code: 2104, Message: "名称已被占用"}
 }
