@@ -59,3 +59,8 @@ func ExistByAccount() *Error {
 func ExistByName() *Error {
 	return &Error{Code: 2104, Message: "名称已被占用"}
 }
+
+// IimitCountByRoleInCompany 指定角色数量超出限制
+func IimitCountByRoleInCompany() *Error {
+	return &Error{Code: 2105, Message: "指定角色数量超出限制"}
+}
