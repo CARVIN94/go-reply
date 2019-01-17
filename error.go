@@ -1,5 +1,35 @@
 package reply
 
+// MicroError 错误
+func MicroError() *Error {
+	return &Error{Code: 100, Message: "网关没有找到微服务"}
+}
+
+// GatewayError 错误
+func GatewayError() *Error {
+	return &Error{Code: 101, Message: "网关信息错误"}
+}
+
+// RequestError 错误
+func RequestError() *Error {
+	return &Error{Code: 102, Message: "数据解析错误请重新提交"}
+}
+
+// NotAuth 错误
+func NotAuth() *Error {
+	return &Error{Code: 401, Message: "请授权后再操作"}
+}
+
+// AuthError 错误
+func AuthError() *Error {
+	return &Error{Code: 403, Message: "权限不足"}
+}
+
+// RouteNotExist 错误
+func RouteNotExist() *Error {
+	return &Error{Code: 404, Message: "route is not exist"}
+}
+
 // Urlencoded 错误
 func Urlencoded() *Error {
 	return &Error{Code: 1001, Message: "is not Urlencoded"}
@@ -23,11 +53,6 @@ func TokenEncryptError() *Error {
 // TokenDecryptError 错误
 func TokenDecryptError() *Error {
 	return &Error{Code: 1005, Message: "密钥错误"}
-}
-
-// AuthError 错误
-func AuthError() *Error {
-	return &Error{Code: 1006, Message: "权限不足"}
 }
 
 // NotExist 错误
