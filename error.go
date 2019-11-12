@@ -40,19 +40,24 @@ func Multipart() *Error {
 	return &Error{Code: 1002, Message: "is not Multipart"}
 }
 
+// JSON 错误
+func JSON() *Error {
+	return &Error{Code: 1003, Message: "is not JSON"}
+}
+
 // SignInError 错误
 func SignInError() *Error {
-	return &Error{Code: 1003, Message: "账号或密码错误"}
+	return &Error{Code: 1004, Message: "账号或密码错误"}
 }
 
 // TokenEncryptError 错误
 func TokenEncryptError() *Error {
-	return &Error{Code: 1004, Message: "加密错误"}
+	return &Error{Code: 1005, Message: "加密错误"}
 }
 
 // TokenDecryptError 错误
 func TokenDecryptError() *Error {
-	return &Error{Code: 1005, Message: "密钥错误"}
+	return &Error{Code: 1006, Message: "密钥错误"}
 }
 
 // NotExist 错误
